@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/top/Conquerors</text>
+
+    </category>
+  </question>
+
+<!-- question: 8666  -->
+  <question type="ddmatch">
+    <name>
+      <text>River crossers</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Match the military figures with the rivers they famously crossed<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <subquestion format="html">
+      <text><![CDATA[<p>Julius Caesar<br></p>]]></text>
+             <answer format="html">
+      <text><![CDATA[<p>Rubicon<br></p>]]></text>
+             </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>George Washington<br></p>]]></text>
+             <answer format="html">
+      <text><![CDATA[<p>Delaware<br></p>]]></text>
+             </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Sadaam Hussein<br></p>]]></text>
+             <answer format="html">
+      <text><![CDATA[<p>Tigris<br></p>]]></text>
+             </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Joshua ben Nun<br></p>]]></text>
+             <answer format="html">
+      <text><![CDATA[<p>Jordan<br></p>]]></text>
+             </answer>
+    </subquestion>
+  </question>
+
+<!-- question: 8668  -->
+  <question type="multichoice">
+    <name>
+      <text>Hannibal's animal</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[What surprise weapon the did Hannibal the general of Carthage bring across the Alps to help defeat the Romans?<br>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Elephants<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Penguins<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Termites<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Worgs<br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 8667  -->
+  <question type="shortanswer">
+    <name>
+      <text>Caesar Sieger</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Which Roman general who laid siege to Jerusalem would later be emperor?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>Titus</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Yes, Vespasian sent him to conquer Jerusalem, but he was recalled before it fell.<br></p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="moodle_auto_format">
+      <text>Julius</text>
+      <feedback format="html">
+        <text><![CDATA[<p>He conquered Britain to become the first emperor.<br></p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="moodle_auto_format">
+      <text>Augustus</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Jerusalem was ruled by Roman clients during his reign.<br></p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="50" format="moodle_auto_format">
+      <text>Pompey</text>
+      <feedback format="html">
+        <text><![CDATA[<p>The general conquered Jerusalem, but was not an emperor.<br></p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Antony</text>
+      <feedback format="html">
+        <text><![CDATA[He lost to Julius and never.<br>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>Nicholas</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Czar of the Russian empire. He never besieged Jerusalem.<br></p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>
