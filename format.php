@@ -78,8 +78,6 @@ class qformat_crossxml extends qformat_xml {
                 $qo->subanswers[$k] = array(
                     'text' => text_to_html($qo->subanswers[$k]),
                     'format' => FORMAT_HTML
-                    //'text' => $qo->subanswers[$k],
-                    //'format' => FORMAT_PLAIN
                 );
             }
         }

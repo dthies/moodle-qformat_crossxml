@@ -28,7 +28,7 @@ $plugin->component = 'qformat_crossxml';
 $plugin->version   = 2018030100;
 $plugin->requires  = 2013051400;
 
-//$plugin->release   = '1.0 Build(20160728)';
+$plugin->release   = '1.0 Beta';
 
 $plugin->maturity  = MATURITY_ALPHA;
 
