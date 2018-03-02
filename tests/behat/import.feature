@@ -1,5 +1,5 @@
 @qformat @qformat_crossxml
-Feature: Test importing questions from Moodle glossary export.
+Feature: Test importing questions with crossxml to change question type
   In order to reuse some questions
   As an teacher
   I need to be able to import them in an alternate form.
@@ -18,10 +18,10 @@ Feature: Test importing questions from Moodle glossary export.
     And I follow "C1"
 
   @javascript @_file_upload
-  Scenario: import XML file of an export glossary
+  Scenario: import XML file
     When I navigate to "Import" node in "Course administration > Question bank"
     And I set the field "id_format_crossxml" to "1"
-    And I upload "question/format/crossxml/tests/fixtures/glossary.xml" file to "Import" filemanager
+    And I upload "question/format/crossxml/tests/fixtures/questions.xml" file to "Import" filemanager
     And I press "id_submitbutton"
     Then I should see "Parsing questions from import file."
     And I should see "Importing 2 questions from file"
