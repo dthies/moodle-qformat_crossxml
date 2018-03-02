@@ -26,4 +26,4 @@ Feature: Test importing questions with crossxml to change question type
     Then I should see "Parsing questions from import file."
     And I should see "Importing 2 questions from file"
     When I press "Continue"
-    Then I should see "Which Roman general"
+    Then I should see "Hannibal's animal"
