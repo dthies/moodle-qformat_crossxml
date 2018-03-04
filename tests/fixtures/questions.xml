@@ -3,12 +3,61 @@
 <!-- question: 0  -->
   <question type="category">
     <category>
-        <text>$course$/top/Conquerors</text>
+        <text>$course$/Conquerors</text>
 
     </category>
   </question>
 
-<!-- question: 8668  -->
+  <question type="matching">
+    <name>
+      <text>River crossers</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Match the military figures with the rivers they famously crossed<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <shuffleanswers>true</shuffleanswers>
+    <correctfeedback format="html">
+      <text>Your answer is correct.</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <subquestion format="html">
+      <text><![CDATA[<p>Julius Caesar<br></p>]]></text>
+      <answer>
+        <text>Rubicon</text>
+      </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>George Washington<br></p>]]></text>
+      <answer>
+        <text>Delaware</text>
+      </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Sadaam Hussein<br></p>]]></text>
+      <answer>
+        <text>Tigris</text>
+      </answer>
+    </subquestion>
+    <subquestion format="html">
+      <text><![CDATA[<p>Joshua ben Nun<br></p>]]></text>
+      <answer>
+        <text>Jordan</text>
+      </answer>
+    </subquestion>
+  </question>
+
   <question type="multichoice">
     <name>
       <text>Hannibal's animal</text>
@@ -61,7 +110,6 @@
     </answer>
   </question>
 
-<!-- question: 8667  -->
   <question type="shortanswer">
     <name>
       <text>Caesar Sieger</text>

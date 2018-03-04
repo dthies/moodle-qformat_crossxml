@@ -24,6 +24,6 @@ Feature: Test importing questions with crossxml to change question type
     And I upload "question/format/crossxml/tests/fixtures/questions.xml" file to "Import" filemanager
     And I press "id_submitbutton"
     Then I should see "Parsing questions from import file."
-    And I should see "Importing 2 questions from file"
+    And I should see "Importing 3 questions from file"
     When I press "Continue"
     Then I should see "Hannibal's animal"

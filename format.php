@@ -72,7 +72,7 @@ class qformat_crossxml extends qformat_xml {
 
     public function import_match($question) {
         $qo = parent::import_match($question);
-        if (in_array('ddmatch', core_component::get_plugin_list('qtype'))) {
+        if (array_key_exists('ddmatch', core_component::get_plugin_list('qtype'))) {
             $qo->qtype = 'ddmatch';
             for ($k = 0; $k < count($qo->subanswers); $k++) {
                 $qo->subanswers[$k] = array(
@@ -91,7 +91,7 @@ class qformat_crossxml extends qformat_xml {
             return parent::import_question($questionxml);
         }
 
-        if (!in_array('ddmatch', core_component::get_plugin_list('qtype'))) {
+        if (!array_key_exists('ddmatch', core_component::get_plugin_list('qtype'))) {
             return null;
         }
         $qtype = question_bank::get_qtype('ddmatch', false);

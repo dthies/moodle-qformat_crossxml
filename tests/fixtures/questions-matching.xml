@@ -3,12 +3,11 @@
 <!-- question: 0  -->
   <question type="category">
     <category>
-        <text>$course$/top/Conquerors</text>
+        <text>$course$/Conquerors</text>
 
     </category>
   </question>
 
-<!-- question: 8666  -->
   <question type="ddmatch">
     <name>
       <text>River crossers</text>
@@ -111,7 +110,6 @@
     </answer>
   </question>
 
-<!-- question: 8667  -->
   <question type="shortanswer">
     <name>
       <text>Caesar Sieger</text>
