@@ -7,10 +7,10 @@ in the Moodle question bank by exporting the questions as Moodle XML
 format and importing with this format. Short answer questions will be
 changed to multiple choice questions, and multiple choice questions in
 the file will be imported as short answer questions. If the Drag and
-Drop Matching matching question type is installed, the those questions
+Drop Matching matching question type is installed, those questions
 will be switched with the standard matching type.
 
-This directory should to question/format/glossary in Moodle installation
+This directory should to question/format/crossxml in Moodle installation
 directory. Login as admin to complete plugin installation.  Then select
 this format *Cross XML* during question bank import.
 
