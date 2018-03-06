@@ -93,6 +93,13 @@ class qformat_crossxml extends qformat_xml {
         }
 
         switch ($questiontype) {
+            case 'multichoiceset':
+            case 'oumultiresponse':
+                $qo = $this->try_importing_using_qtype($questionxml, null, null, $questiontype);
+                $qo->qtype = 'multichoice';
+                $qo->fraction = $qo->correctanswer;
+                $qo->single = 0;
+                return $qo;
             case 'ddmatch':
                 return $this->import_ddmatch($questionxml);
             default:
