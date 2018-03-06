@@ -94,9 +94,7 @@ class qformat_crossxml extends qformat_xml {
         if (!array_key_exists('ddmatch', core_component::get_plugin_list('qtype'))) {
             return null;
         }
-        $qtype = question_bank::get_qtype('ddmatch', false);
-
-        $qo = $qtype->import_from_xml($questionxml, null, $this);
+        $qo = $this->try_importing_using_qtype($questionxml, null, null, 'ddmatch');
         $qo->qtype = 'match';
         for ($k = 0; $k < count($qo->subanswers); $k++) {
             if ($qo->subanswers[$k]['format'] == FORMAT_HTML) {
@@ -105,8 +103,17 @@ class qformat_crossxml extends qformat_xml {
                 $qo->subanswers[$k] = $qo->subanswers[$k]['text'];
             }
         }
+
+        return $qo;
+    }
+
+    // Overwrite inherited to force XML input`.
+    protected function try_importing_using_qtype($data, $question = null, $extra = null,
+                $qtypehint = '') {
+        $qtype = question_bank::get_qtype($qtypehint, false);
+
+        $qo = $qtype->import_from_xml($data, null, $this);
         return $qo;
 
     }
-
 }
