@@ -87,13 +87,20 @@ class qformat_crossxml extends qformat_xml {
     protected function import_question($questionxml) {
         $questiontype = $questionxml['@']['type'];
 
-        if ($questiontype != 'ddmatch' ) {
-            return parent::import_question($questionxml);
-        }
-
-        if (!array_key_exists('ddmatch', core_component::get_plugin_list('qtype'))) {
+        if (!array_key_exists($questiontype, core_component::get_plugin_list('qtype')) &&
+                $questiontype != 'matching') {
             return null;
         }
+
+        switch ($questiontype) {
+            case 'ddmatch':
+                return $this->import_ddmatch($questionxml);
+            default:
+                return parent::import_question($questionxml);
+        }
+    }
+
+    protected function import_ddmatch($questionxml) {
         $qo = $this->try_importing_using_qtype($questionxml, null, null, 'ddmatch');
         $qo->qtype = 'match';
         for ($k = 0; $k < count($qo->subanswers); $k++) {
