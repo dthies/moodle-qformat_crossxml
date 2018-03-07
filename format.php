@@ -88,6 +88,7 @@ class qformat_crossxml extends qformat_xml {
         $questiontype = $questionxml['@']['type'];
 
         if (!array_key_exists($questiontype, core_component::get_plugin_list('qtype')) &&
+                $questiontype != 'category' &&
                 $questiontype != 'matching') {
             return null;
         }
