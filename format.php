@@ -99,7 +99,16 @@ class qformat_crossxml extends qformat_xml {
                 $qo = $this->try_importing_using_qtype($questionxml, null, null, $questiontype);
                 $qo->qtype = 'multichoice';
                 $qo->fraction = $qo->correctanswer;
+                $total = 0;
                 $qo->single = 0;
+
+                // Make sure fractions add to 1.
+                foreach ($qo->fraction as $fraction) {
+                    $total += $fraction;
+                }
+                foreach ($qo->fraction as $k => $fraction) {
+                    $qo->fraction[$k] = round($fraction / $total, 7);
+                }
                 return $qo;
             case 'ddmatch':
                 return $this->import_ddmatch($questionxml);
