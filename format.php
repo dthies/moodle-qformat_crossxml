@@ -51,7 +51,7 @@ class qformat_crossxml extends qformat_xml {
         $qo->qtype = 'shortanswer';
         for ($k = 0; $k < count($qo->answer); $k++) {
             if ($qo->answer[$k]['format'] == FORMAT_HTML) {
-                $qo->answer[$k] = html_to_text($qo->answer[$k]['text']);
+                $qo->answer[$k] = strip_tags($qo->answer[$k]['text']);
             } else {
                 $qo->answer[$k] = $qo->answer[$k]['text'];
             }
