@@ -30,9 +30,7 @@ require_once($CFG->dirroot . '/question/format/xml/format.php');
 /**
  * Importer for Cross XML question format.
  *
- * See http://docs.moodle.org/en/Moodle_XML_format for a description of the format.
- *
- * @copyright  1999 onwards Martin Dougiamas {@link http://moodle.com}
+ * @copyright  Daniel Thies <dethies@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class qformat_crossxml extends qformat_xml {
@@ -131,7 +129,7 @@ class qformat_crossxml extends qformat_xml {
         return $qo;
     }
 
-    // Overwrite inherited to force XML input`.
+    // Overwrite inherited method to force XML input`.
     protected function try_importing_using_qtype($data, $question = null, $extra = null,
                 $qtypehint = '') {
         $qtype = question_bank::get_qtype($qtypehint, false);

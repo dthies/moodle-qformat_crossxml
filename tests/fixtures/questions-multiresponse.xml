@@ -23,10 +23,10 @@
     <hidden>0</hidden>
     <shuffleanswers>true</shuffleanswers>
     <correctfeedback format="html">
-      <text></text>
+      <text><![CDATA[<p>Your answer is correct.<br></p>]]></text>
     </correctfeedback>
     <incorrectfeedback format="html">
-      <text></text>
+      <text><![CDATA[<p>Your answer is incorrect.<br></p>]]></text>
     </incorrectfeedback>
     <answernumbering>abc</answernumbering>
     <answer fraction="100" format="html">
@@ -71,13 +71,13 @@
     <shuffleanswers>true</shuffleanswers>
     <answernumbering>abc</answernumbering>
     <correctfeedback format="html">
-      <text></text>
+      <text><![CDATA[<p>Your answer is correct.<br></p>]]></text>
     </correctfeedback>
     <partiallycorrectfeedback format="html">
-      <text></text>
+      <text><![CDATA[<p>Your answer is partially correct.<br></p>]]></text>
     </partiallycorrectfeedback>
     <incorrectfeedback format="html">
-      <text></text>
+      <text><![CDATA[<p>Your answer is incorrect.<br></p>]]></text>
     </incorrectfeedback>
     <answer fraction="100" format="html">
       <text><![CDATA[<p>Irwin Rommel<br></p>]]></text>
