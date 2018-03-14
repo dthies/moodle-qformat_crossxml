@@ -104,8 +104,19 @@ class qformat_crossxml extends qformat_xml {
                 foreach ($qo->fraction as $fraction) {
                     $total += $fraction;
                 }
+                $singlemark = round(1 / $total, 7);
                 foreach ($qo->fraction as $k => $fraction) {
-                    $qo->fraction[$k] = round($fraction / $total, 7);
+                    switch ($questiontype) {
+                        case 'multichoiceset':
+                            // Give nothing if one wrong choice is selected.
+                            $qo->fraction[$k] = $fraction ? $singlemark : -1;
+                            break;
+                        case 'oumultiresponse':
+                        default:
+                            // Set penalty to same value as for correct choices.
+                            $qo->fraction[$k] = $fraction ? $singlemark : - $singlemark;
+                            break;
+                    }
                 }
                 return $qo;
             case 'ddmatch':
