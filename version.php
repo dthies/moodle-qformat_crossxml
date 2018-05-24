@@ -18,14 +18,14 @@
  * Version information for the Cross XML format
  *
  * @package    qformat_crossxml
- * @copyright  Daniel Thies <dethies@gmail.com>
+ * @copyright  2018 Daniel Thies <dethies@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'qformat_crossxml';
-$plugin->version   = 2018031200;
+$plugin->version   = 2018031201;
 $plugin->requires  = 2016120500;
 
 $plugin->release   = '1.0 Beta';

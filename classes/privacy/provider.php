@@ -15,14 +15,32 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component qformat_crossxml
+ * Privacy Subsystem implementation for qformat_crossxml.
  *
  * @package    qformat_crossxml
  * @copyright  2018 Daniel Thies <dethies@gmail.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Cross XML format';
-$string['pluginname_help'] = 'This imports Moodle XML files, but changes some questions to different question types.';
-$string['pluginname_link'] = 'qformat/crossxml';
-$string['privacy:metadata'] = 'The XML question format plugin does not store any personal data.';
+namespace qformat_crossxml\privacy;
+
+defined('MOODLE_INTERNAL') || die();
+
+/**
+ * Privacy Subsystem for qformat_crossxml implementing null_provider.
+ *
+ * @copyright   2018 Daniel Thies <dethies@gmail.com>
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class provider implements \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() {
+        return 'privacy:metadata';
+    }
+}
