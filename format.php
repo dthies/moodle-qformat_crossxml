@@ -126,6 +126,11 @@ class qformat_crossxml extends qformat_xml {
         }
     }
 
+    /**
+     * Import Drag and Drop matching type question if installed
+     * @param array question question array from xml tree
+     * @return object question object
+     */
     protected function import_ddmatch($questionxml) {
         $qo = $this->try_importing_using_qtype($questionxml, null, null, 'ddmatch');
         $qo->qtype = 'match';
