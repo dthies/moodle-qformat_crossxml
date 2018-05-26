@@ -25,4 +25,4 @@
 $string['pluginname'] = 'Cross XML format';
 $string['pluginname_help'] = 'This imports Moodle XML files, but changes some questions to different question types.';
 $string['pluginname_link'] = 'qformat/crossxml';
-$string['privacy:metadata'] = 'The XML question format plugin does not store any personal data.';
+$string['privacy:metadata'] = 'The Cross XML question format plugin does not store any personal data.';
