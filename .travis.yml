@@ -14,8 +14,12 @@ php:
  - 7.1
 
 addons:
-  postgresql: "9.3"
-  mysql: "5.7"
+  postgresql: "9.3
+  sources:
+    - mysql-5.7-trusty
+  packages:
+    - mysql-server
+    - mysql-client
 
 env:
  matrix:
