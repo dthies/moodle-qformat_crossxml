@@ -15,7 +15,7 @@ php:
 
 addons:
   postgresql: "9.3"
-  myslq: "5.7"
+  mysql: "5.7"
 
 env:
  matrix:
