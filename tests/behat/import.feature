@@ -19,7 +19,7 @@ Feature: Test importing questions with crossxml to change question type
 
   @javascript @_file_upload
   Scenario: import XML file
-    When I navigate to "Import" node in "Course administration > Question bank"
+    When I navigate to "Question bank > Import" in current page administration
     And I set the field "id_format_crossxml" to "1"
     And I upload "question/format/crossxml/tests/fixtures/questions.xml" file to "Import" filemanager
     And I press "id_submitbutton"
