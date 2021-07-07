@@ -35,15 +35,31 @@ require_once($CFG->dirroot . '/question/format/xml/format.php');
  */
 class qformat_crossxml extends qformat_xml {
 
+    /**
+     * Provide import
+     *
+     * @return bool
+     */
     public function provide_import() {
         return true;
     }
 
+    /**
+     * We do not export
+     *
+     * @return bool
+     */
     public function provide_export() {
         return false;
     }
 
-    // Override to change question object to short answer.
+    /**
+     * Import multiple choice question
+     *
+     * Override to change question object to short answer.
+     * @param array $question question array from xml tree
+     * @return object question object
+     */
     public function import_multichoice($question) {
         $qo = parent::import_multichoice($question);
         $qo->qtype = 'shortanswer';
@@ -57,7 +73,14 @@ class qformat_crossxml extends qformat_xml {
         return $qo;
     }
 
-    // Override to change question object to multichoice.
+    /**
+     * Import short answer type question
+     *
+     * Override to change question object to multichoice.
+     *
+     * @param array $question question array from xml tree
+     * @return object question object
+     */
     public function import_shortanswer($question) {
         $qo = parent::import_shortanswer($question);
         $qo->qtype = 'multichoice';
@@ -68,6 +91,12 @@ class qformat_crossxml extends qformat_xml {
         return $qo;
     }
 
+    /**
+     * Import matching type question
+     *
+     * @param array $question question array from xml tree
+     * @return object question object
+     */
     public function import_match($question) {
         $qo = parent::import_match($question);
         if (array_key_exists('ddmatch', core_component::get_plugin_list('qtype'))) {
@@ -82,6 +111,12 @@ class qformat_crossxml extends qformat_xml {
         return $qo;
     }
 
+    /**
+     * Import single question from xml
+     *
+     * @param array $questionxml xml describing the question
+     * @return null|stdClass an object with data to be fed to question type save_question_options
+     */
     protected function import_question($questionxml) {
         $questiontype = $questionxml['@']['type'];
 
@@ -128,6 +163,7 @@ class qformat_crossxml extends qformat_xml {
 
     /**
      * Import Drag and Drop matching type question if installed
+     *
      * @param array $questionxml question array from xml tree
      * @return object question object
      */
@@ -145,8 +181,16 @@ class qformat_crossxml extends qformat_xml {
         return $qo;
     }
 
-    // Overwrite inherited method to force XML input`.
-    protected function try_importing_using_qtype($data, $question = null, $extra = null,
+    /**
+     * Import for questiontype plugins
+     *
+     * @param mixed $data The segment of data containing the question
+     * @param object $question processed (so far) by standard import code if appropriate
+     * @param mixed $extra any additional format specific data that may be passed by the format
+     * @param string $qtypehint about a question type from format
+     * @return object question object suitable for save_options() or false if cannot handle
+     */
+    public function try_importing_using_qtype($data, $question = null, $extra = null,
                 $qtypehint = '') {
         $qtype = question_bank::get_qtype($qtypehint, false);
 
