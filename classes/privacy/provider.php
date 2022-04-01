@@ -24,8 +24,6 @@
 
 namespace qformat_crossxml\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for qformat_crossxml implementing null_provider.
  *
