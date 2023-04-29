@@ -156,6 +156,14 @@ class qformat_crossxml extends qformat_xml {
                 return $qo;
             case 'ddmatch':
                 return $this->import_ddmatch($questionxml);
+            case 'ddwtos':
+                $qo = $this->try_importing_using_qtype($questionxml, null, null, 'ddwtos');
+                $qo->qtype = 'gapselect';
+                return $qo;
+            case 'gapselect':
+                $qo = $this->try_importing_using_qtype($questionxml, null, null, 'gapselect');
+                $qo->qtype = 'ddwtos';
+                return $qo;
             default:
                 return parent::import_question($questionxml);
         }

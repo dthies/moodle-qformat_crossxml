@@ -6,11 +6,12 @@ in a Moodle XML export file.  It enables users to change types of some
 questions in the Moodle question bank by exporting the questions as Moodle
 XML format and importing with this format. Short answer questions will
 be changed to multiple choice questions, and multiple choice questions
-in the file will be imported as short answer questions. If the Drag and
-Drop Matching matching question type is installed, those questions will be
-switched with the standard matching type. If All-or-Nothing Multichoice or
-OU Multiresonse are installed those types will be converted to regular
-multichoice.
+in the file will be imported as short answer questions.  Drag and drop
+into text will be converted to Select missing words and vice versa.
+If the Drag and Drop Matching matching question type is installed,
+those questions will be switched with the standard matching type. If
+All-or-Nothing Multichoice or OU Multiresonse are installed those types
+will be converted to regular multichoice.
 
 This directory should to question/format/crossxml in Moodle installation
 directory. Login as admin to complete plugin installation.  Then select
