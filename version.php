@@ -25,13 +25,13 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'qformat_crossxml';
-$plugin->version   = 2019033003;
+$plugin->version   = 2019033004;
 $plugin->requires  = 2018051400;
 
 $plugin->release   = '1.1';
 
 $plugin->maturity  = MATURITY_STABLE;
 
-$plugin->dependencies = array(
+$plugin->dependencies = [
     'qformat_xml' => 2016120500,
-);
+];

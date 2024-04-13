@@ -34,7 +34,6 @@ require_once($CFG->dirroot . '/question/format/xml/format.php');
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class qformat_crossxml extends qformat_xml {
-
     /**
      * Provide import
      *
@@ -86,7 +85,7 @@ class qformat_crossxml extends qformat_xml {
         $qo->qtype = 'multichoice';
         $qo->single = 1;
         for ($k = 0; $k < count($qo->answer); $k++) {
-            $qo->answer[$k] = array('text' => $qo->answer[$k], 'format' => FORMAT_PLAIN);
+            $qo->answer[$k] = ['text' => $qo->answer[$k], 'format' => FORMAT_PLAIN];
         }
         return $qo;
     }
@@ -102,10 +101,10 @@ class qformat_crossxml extends qformat_xml {
         if (array_key_exists('ddmatch', core_component::get_plugin_list('qtype'))) {
             $qo->qtype = 'ddmatch';
             for ($k = 0; $k < count($qo->subanswers); $k++) {
-                $qo->subanswers[$k] = array(
+                $qo->subanswers[$k] = [
                     'text' => text_to_html($qo->subanswers[$k]),
-                    'format' => FORMAT_HTML
-                );
+                    'format' => FORMAT_HTML,
+                ];
             }
         }
         return $qo;
@@ -120,9 +119,11 @@ class qformat_crossxml extends qformat_xml {
     protected function import_question($questionxml) {
         $questiontype = $questionxml['@']['type'];
 
-        if (!array_key_exists($questiontype, core_component::get_plugin_list('qtype')) &&
+        if (
+            !array_key_exists($questiontype, core_component::get_plugin_list('qtype')) &&
                 $questiontype != 'category' &&
-                $questiontype != 'matching') {
+                $questiontype != 'matching'
+        ) {
             return null;
         }
 
@@ -198,12 +199,15 @@ class qformat_crossxml extends qformat_xml {
      * @param string $qtypehint about a question type from format
      * @return object question object suitable for save_options() or false if cannot handle
      */
-    public function try_importing_using_qtype($data, $question = null, $extra = null,
-                $qtypehint = '') {
+    public function try_importing_using_qtype(
+        $data,
+        $question = null,
+        $extra = null,
+        $qtypehint = ''
+    ) {
         $qtype = question_bank::get_qtype($qtypehint, false);
 
         $qo = $qtype->import_from_xml($data, null, $this);
         return $qo;
-
     }
 }
