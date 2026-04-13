@@ -25,9 +25,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'qformat_crossxml';
-$plugin->version   = 2019033005;
+$plugin->version   = 2019033006;
 $plugin->requires  = 2018051400;
-$plugin->supported   = [35, 501];
+$plugin->supported   = [35, 502];
 
 $plugin->release   = '1.1';
 
